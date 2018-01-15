@@ -28,18 +28,8 @@ fn main() {
     let z = t + Duration::weeks(2) + Duration::days(2);
     println!("{:?}, {:?}", z.day(), z.month());
 
-    disco();
+    init_threads();
         
-}
-
-
-fn open_connection() {
-    let port_name = PORT_NAME;
-    if let Ok(mut port) = serialport::open(port_name) {
-        init_threads()
-    } else {
-        println!("Error: Port '{}' not available", port_name);
-    }
 }
 
 
